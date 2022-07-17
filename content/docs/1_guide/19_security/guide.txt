@@ -31,6 +31,16 @@ Kirby's current version number is stored in `/kirby/composer.json` in the versio
 
 <info>Make sure to never show the version number publicly in one of your templates as that may give attackers valuable information about your site.</info>
 
+### Use versions with security support
+
+Whenever we find or get notified of a vulnerability, we release updates for all Kirby versions with active support and security support. Active support means that the version receives functionality updates, enhancements and bug fixes. Security support means that the version only receives security updates.
+
+Versions that are "end of life" receive no updates whatsoever. We cannot ensure that these versions are free of vulnerabilities and security researchers generally don't review these versions for vulnerabilities either.
+
+So even if you can't update to the latest Kirby release, we strongly recommend to keep your Kirby installation on a version that has at least security support. Versions that are end of life should **never** be used in production.
+
+You can find the support status of your particular Kirby version on our (link: security#supported-versions text: security page).
+
 ## Switch off debug mode
 
 Kirby’s debug mode is very handy to find issues in your installation, but **it must be switched off in production!**

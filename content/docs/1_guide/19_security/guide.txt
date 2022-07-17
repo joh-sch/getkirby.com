@@ -13,7 +13,7 @@ Text:
 
 We constantly improve the code and security of Kirby with every update. You can find the latest Kirby version and security incidents of previous Kirby releases on our (link: security#supported-versions text: security page).
 
-Please always make sure to **update to the latest version** in order to fix possible issues and vulnerabilities.
+Please always make sure to **keep your Kirby version up to date** in order to fix possible issues and vulnerabilities.
 
 <warning>
 However, *never* update a live website directly on the server. Test updates locally or on your staging server first to make sure none of your code breaks or plugins suddenly stop working. Always make sure to have a backup in place.
@@ -31,15 +31,13 @@ Kirby's current version number is stored in `/kirby/composer.json` in the versio
 
 <info>Make sure to never show the version number publicly in one of your templates as that may give attackers valuable information about your site.</info>
 
-### Use versions with security support
+### Use versions without known vulnerabilities
 
 Whenever we find or get notified of a vulnerability, we release updates for all Kirby versions with active support and security support. Active support means that the version receives functionality updates, enhancements and bug fixes. Security support means that the version only receives security updates.
 
-Versions that are "end of life" receive no updates whatsoever. We cannot ensure that these versions are free of vulnerabilities and security researchers generally don't review these versions for vulnerabilities either.
+Versions that are "end of life" receive no updates whatsoever. We cannot ensure that these versions are free of vulnerabilities and security researchers generally don't review these versions for vulnerabilities either. Versions that are marked end of life on our (link: security#supported-versions text: security page) should therefore **never** be used in production.
 
-So even if you can't update to the latest Kirby release, we strongly recommend to keep your Kirby installation on a version that has at least security support. Versions that are end of life should **never** be used in production.
-
-You can find the support status of your particular Kirby version on our (link: security#supported-versions text: security page).
+To avoid attacks using known vulnerabilities, we strongly recommend to only use Kirby versions that are not affected by known vulnerabilities listed in the (link: security#past-security-incidents text: incident table). If your Kirby version is newer than the one listed with "No known vulnerabilities", you are good to go. If your version is older, it may still be unaffected by vulnerabilities – to verify this, please review the incident table and look for your particular version in the "Affected" column.
 
 ## Switch off debug mode
 

@@ -36,19 +36,26 @@ Supported:
 -
     version: {{ latest }}
     status: latest
-    description: Latest Kirby release, actively supported
+    description: Latest Kirby release
 -
     version: >={{ no-vulnerabilities }}
     status: no-vulnerabilities
     description: No known vulnerabilities
 -
+    version: 3.*
+    status: active-support
+    description: Actively supported
+    latest: {{ latest }}
+-
     version: 2.*
     status: end-of-life
     description: Not supported (end of life) since January 1, 2021
+    latest: 2.5.12
 -
     version: 1.*
     status: end-of-life
     description: Not supported (end of life) since February 1, 2016
+    latest: 1.1.2
 
 ----
 

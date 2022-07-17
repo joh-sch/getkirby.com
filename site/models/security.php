@@ -27,6 +27,7 @@ class SecurityPage extends Page
 
         return [
             'latest'             => $this->kirby()->version(),
+            'latestMajor'        => Str::before($this->kirby()->version(), '.') . '.0',
             'no-vulnerabilities' => $noVulns
         ];
     }

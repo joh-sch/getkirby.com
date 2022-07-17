@@ -54,6 +54,9 @@ There MUST be a separate entry with the `status` value `active-support`, `securi
 
 This is a "fast path" that skips both the update check and the check for known vulnerabilities using the incident list.
 
+The `url` field of the `latest` entry MUST be set to the URL with more information on the latest version.
+The `url-upgrade` field of the `latest` entry MUST be set to the marketing URL for users upgrading from a previous major release.
+
 The `latest` entry SHOULD be left untouched as it's auto-populated with the Kirby version of the getkirby.com site.
 
 #### `no-vulnerabilities`
@@ -69,17 +72,23 @@ This marks a version range that receives functionality updates, enhancements and
 
 The `latest` field of the `active-support` entry MUST be set to the latest version within the version range (which can be used to check for free updates within this major release). It SHOULD be set to `{{ latest }}`, which will be auto-populated with the Kirby version of the getkirby.com site.
 
+The `url` field of the `active-support` entry MUST be set to the URL with more information on the latest version within the version range. The `{{ latest }}` placeholder SHOULD be used in the URL.
+
 #### `security-support`
 
 This marks a version range that only receives security updates.
 
 The `latest` field of the `security-support` entry MUST be set to the latest version within the version range (which can be used to check for free updates within this major release).
 
+The `url` field of the `security-support` entry MUST be set to the URL with more information on the latest version within the version range.
+
 #### `end-of-life`
 
 This marks a version range that receives no updates whatsoever.
 
 The `latest` field of the `end-of-life` entry MUST be set to the latest version within the version range (which can be used to check for free updates within this major release).
+
+The `url` field of the `end-of-life` entry MUST be set to the URL with more information on the latest version within the version range.
 
 ## `Incidents` field
 
@@ -105,6 +114,8 @@ Versions:
     version: {{ latest }}
     status: latest
     description: Latest Kirby release
+    url: https://github.com/getkirby/kirby/releases/tag/{{ latest }}
+    url-upgrade: https://getkirby.com/releases/{{ latestMajor }}
 -
     version: >={{ no-vulnerabilities }}
     status: no-vulnerabilities
@@ -114,16 +125,19 @@ Versions:
     status: active-support
     description: Actively supported
     latest: {{ latest }}
+    url: https://github.com/getkirby/kirby/releases/tag/{{ latest }}
 -
     version: 2.*
     status: end-of-life
     description: Not supported (end of life) since January 1, 2021
     latest: 2.5.12
+    url: https://github.com/getkirby-v2/kirby/releases/tag/2.5.12
 -
     version: 1.*
     status: end-of-life
     description: Not supported (end of life) since February 1, 2016
     latest: 1.1.2
+    url: https://github.com/getkirby-v1/starterkit/releases/tag/1.1.2
 
 ----
 

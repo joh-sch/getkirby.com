@@ -41,7 +41,7 @@ Versions that are marked end of life on our (link: security#supported-versions t
 
 ### Use versions without known vulnerabilities
 
-To avoid attacks, we strongly recommend to only use Kirby versions that are not affected by known vulnerabilities listed in the (link: security#past-security-incidents text: incident table). If your Kirby version is newer than the one listed with "No known vulnerabilities", you are good to go.
+To avoid attacks, we strongly recommend to only use Kirby versions that are not affected by known vulnerabilities listed in the (link: security#past-security-incidents text: incident table). If your Kirby version is newer than the one (link: security#supported-versions text: listed with "No known vulnerabilities"), you are good to go.
 
 If your version is older than that but still under active or security support, you can verify your security status by reviewing the incident table and looking for your particular version in the "Affected" column.
 

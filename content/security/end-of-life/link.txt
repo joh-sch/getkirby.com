@@ -2,4 +2,4 @@ Title: End of life
 
 ----
 
-Link: docs/guide/security#always-update-your-kirby-installation__use-versions-without-known-vulnerabilities
+Link: docs/guide/security#always-update-your-kirby-installation__never-use-end-of-life-versions

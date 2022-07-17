@@ -6,7 +6,7 @@ Text:
 
 ## Supported Versions
 
-{{ supported }}
+{{ versions }}
 
 <info>
 If you need the version information from this page in a machine-readable format, you can use the (link: security.json text: JSON representation).
@@ -37,9 +37,9 @@ Docs:
 
 Version constraints use [Composer's version constraint syntax](https://getcomposer.org/doc/articles/versions.md#writing-version-constraints).
 
-## `Supported` field
+## `Versions` field
 
-The `Supported` field allows to find the support status of a particular version and enables update checks (is a new version available, is it an update or upgrade and what is its version number?).
+The `Versions` field allows to find the support status of a particular version and enables update checks (is a new version available, is it an update or upgrade and what is its version number?).
 
 Each entry MUST have a `version` field (Composer version constraint), a `status` (see below) and a human-readable `description`.
 
@@ -99,7 +99,7 @@ Each incident entry MAY have the following fields (required fields are marked wi
 
 ----
 
-Supported:
+Versions:
 
 -
     version: {{ latest }}

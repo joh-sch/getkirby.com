@@ -58,7 +58,6 @@ There also MUST be exactly one entry with the `status` value `no-vulnerabilities
 This is a "fast path" that skips both the update check and the check for known vulnerabilities using the incident list.
 
 The `url` field of the `latest` entry MUST be set to the URL with more information on the latest version.
-The `url-upgrade` field of the `latest` entry MUST be set to the marketing URL for users upgrading from a previous major release.
 
 The `latest` entry SHOULD be left untouched as it's auto-populated with the Kirby version of the getkirby.com site.
 
@@ -77,6 +76,8 @@ The `latest` field of the `active-support` entry MUST be set to the latest versi
 
 The `url` field of the `active-support` entry MUST be set to a URL template that contains the `$version` placeholder. The generated URLs SHOULD point to a page with more information and download links for the respective version.
 
+The `url-upgrade` field of the `active-support` entry MUST be set to the URL with migration information for users upgrading from this version range to the latest major release.
+
 #### `security-support`
 
 This marks a version range that only receives security updates.
@@ -85,6 +86,8 @@ The `latest` field of the `security-support` entry MUST be set to the latest ver
 
 The `url` field of the `security-support` entry MUST be set to a URL template that contains the `$version` placeholder. The generated URLs SHOULD point to a page with more information and download links for the respective version.
 
+The `url-upgrade` field of the `security-support` entry MUST be set to the URL with migration information for users upgrading from this version range to the latest major release.
+
 #### `end-of-life`
 
 This marks a version range that receives no updates whatsoever.
@@ -92,6 +95,8 @@ This marks a version range that receives no updates whatsoever.
 The `latest` field of the `end-of-life` entry MUST be set to the latest version within the version range (which can be used to check for free updates within this major release).
 
 The `url` field of the `end-of-life` entry MUST be set to a URL template that contains the `$version` placeholder. The generated URLs SHOULD point to a page with more information and download links for the respective version.
+
+The `url-upgrade` field of the `end-of-life` entry MUST be set to the URL with migration information for users upgrading from this version range to the latest major release.
 
 ## `Incidents` field
 
@@ -129,7 +134,6 @@ Versions:
     status: latest
     description: Latest Kirby release
     url: https://github.com/getkirby/kirby/releases/tag/{{ latest }}
-    url-upgrade: https://getkirby.com/releases/{{ latestMajor }}
 -
     version: >={{ no-vulnerabilities }}
     status: no-vulnerabilities
@@ -140,18 +144,21 @@ Versions:
     description: Actively supported
     latest: {{ latest }}
     url: https://github.com/getkirby/kirby/releases/tag/$version
+    url-upgrade: https://getkirby.com/releases/{{ latestMajor }}
 -
     version: 2.*
     status: end-of-life
     description: Not supported (end of life) since January 1, 2021
     latest: 2.5.12
     url: https://github.com/getkirby-v2/kirby/releases/tag/$version
+    url-upgrade: https://getkirby.com/releases/{{ latestMajor }}
 -
     version: 1.*
     status: end-of-life
     description: Not supported (end of life) since February 1, 2016
     latest: 1.1.2
     url: https://github.com/getkirby-v1/starterkit/releases/tag/$version
+    url-upgrade: https://getkirby.com/releases/{{ latestMajor }}
 
 ----
 
